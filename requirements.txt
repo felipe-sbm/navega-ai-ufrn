@@ -1,0 +1,15 @@
+streamlit
+
+langchain
+langchain-community
+langchain-huggingface
+langchain-chroma
+
+chromadb
+
+transformers
+sentence-transformers
+
+pypdf
+python-docx
+docx2txt
