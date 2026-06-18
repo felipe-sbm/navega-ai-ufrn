@@ -5,6 +5,10 @@ langchain-community
 langchain-huggingface
 langchain-chroma
 
+watchdog
+
+torchvision
+
 chromadb
 
 transformers
