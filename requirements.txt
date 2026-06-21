@@ -7,13 +7,14 @@ langchain-chroma
 
 watchdog
 
-torchvision
-
 chromadb
 
 transformers
 sentence-transformers
+accelerate
 
 pypdf
 python-docx
 docx2txt
+
+python-dotenv
