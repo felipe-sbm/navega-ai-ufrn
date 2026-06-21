@@ -13,8 +13,4 @@ transformers
 sentence-transformers
 accelerate
 
-pypdf
-python-docx
-docx2txt
-
-python-dotenv
+python-dotenvq

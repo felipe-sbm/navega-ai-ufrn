@@ -1,19 +1,44 @@
 import streamlit as st
 from ui.chat import clear_chat_history
+from config.settings import AVAILABLE_MODELS
+
 
 def render_sidebar():
     with st.sidebar:
         st.markdown(
             """
-            **Assistente Virtual da UFRN**
+            **Assistente Virtual do IMDtec**
             
             Tire dúvidas sobre:
             - o IMDtec
-            - a PPGCTI
             - Módulo Integrador
-            - Processos de pós graduação como material didático e resoluções
+            - Grades Curriculares
+            - Processos Burocráticos
             """
         )
+
+        st.markdown("---")
+
+        st.markdown("### Modelo de IA")
+        model_keys = list(AVAILABLE_MODELS.keys())
+        default_idx = 0  # Qwen é o padrão
+
+        selected_model = st.selectbox(
+            "Escolha o modelo:",
+            options=model_keys,
+            index=default_idx,
+            format_func=lambda k: k.split(" (")[0],  # Mostra só o nome (ex: "Qwen2.5-1.5B")
+            help="Selecione o modelo de linguagem para responder às perguntas."
+        )
+        
+        st.caption(AVAILABLE_MODELS[selected_model]["description"])
+
+        if "selected_model" not in st.session_state:
+            st.session_state.selected_model = selected_model
+        elif st.session_state.selected_model != selected_model:
+            st.session_state.selected_model = selected_model
+            st.session_state.model_changed = True
+            st.rerun()
 
         st.markdown("---")
 
@@ -26,4 +51,5 @@ def render_sidebar():
             st.rerun()
 
         st.markdown("---")
+
         st.caption("Desenvolvido no IMDtec")

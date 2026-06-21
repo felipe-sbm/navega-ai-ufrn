@@ -20,14 +20,25 @@ def get_existing_vector_store(embeddings):
     chroma_dir = CHROMA_DIR
     chroma_db_file = chroma_dir / "chroma.sqlite3"
 
-    if chroma_db_file.exists():
+    if not chroma_db_file.exists():
+        return None
+
+    try:
         print(f"Carregando vector store existente em: {chroma_dir}")
         return Chroma(
             collection_name=COLLECTION_NAME,
             embedding_function=embeddings,
             persist_directory=str(chroma_dir)
         )
-    return None
+    except Exception as e:
+        msg = str(e).lower()
+        if ("pickle" in msg) or ("eof" in msg) or ("hnsw" in msg) or ("deserial" in msg):
+            print(f"Falha ao carregar vector store (provável corrupção/incompatibilidade). Recriando... Erro: {e}")
+            if chroma_dir.exists():
+                shutil.rmtree(chroma_dir)
+            return None
+        raise
+
 
 
 def create_vector_store(documents, embeddings, force_rebuild=False):

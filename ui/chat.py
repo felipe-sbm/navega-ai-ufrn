@@ -3,7 +3,11 @@ from langchain_core.messages import AIMessage, HumanMessage
 
 def init_chat_history():
     if "messages" not in st.session_state:
-        st.session_state.messages = []
+        st.session_state.messages = [
+            AIMessage(
+                content="Olá, como posso lhe ajudar hoje? 😊"
+            )
+        ]
 
 def add_message(role, content):
     if role == "user":
