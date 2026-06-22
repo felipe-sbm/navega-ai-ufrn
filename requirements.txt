@@ -9,6 +9,8 @@ watchdog
 
 chromadb
 
+torch
+torchvision
 transformers
 sentence-transformers
 accelerate
