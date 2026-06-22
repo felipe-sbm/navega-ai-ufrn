@@ -32,10 +32,10 @@ AVAILABLE_MODELS = {
     },
 }
 
-TOP_K = 3
+TOP_K = 8
 FETCH_K = 10
 
-CHUNK_SIZE = 500
-CHUNK_OVERLAP = 50
+CHUNK_SIZE = 1000
+CHUNK_OVERLAP = 200
 
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"

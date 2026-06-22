@@ -18,6 +18,10 @@ def format_docs(docs):
     formatted = []
 
     for i, doc in enumerate(docs, 1):
+        print(f"\nDOC {i}")
+        print(doc.metadata)
+
+        print(doc.page_content)
 
         source = doc.metadata.get("arquivo", "Desconhecido")
         category = doc.metadata.get("categoria", "Geral")
@@ -61,7 +65,7 @@ def create_chain(
 
     chain = (
         RunnableParallel(
-            {"context": retriever | format_docs, "question": RunnablePassthrough(),}
+            {"context": retriever | format_docs, "question": RunnablePassthrough()}
         )
         | prompt
         | llm

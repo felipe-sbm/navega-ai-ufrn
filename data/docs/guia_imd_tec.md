@@ -39,6 +39,40 @@ Todos os cursos técnicos do IMDtec são organizados em quatro módulos:
 
 ---
 
+## Carga Horária por Habilitação
+
+| Habilitação                   | Módulo Básico | Módulo Intermediário | Módulo Avançado | Módulo Integrador | Carga Horária Total |
+| ----------------------------- | ------------- | -------------------- | --------------- | ----------------- | ------------------- |
+| Informática para Internet     | 320h          | 280h                 | 240h            | 160h              | 1000h               |
+| Redes de Computadores         | 320h          | 280h                 | 240h            | 160h              | 1000h               |
+| Inteligência Artificial (IA)  | 320h          | 280h                 | 240h            | 160h              | 1000h               |
+| Programação de Jogos Digitais | 320h          | 260h                 | 260h            | 160h              | 1000h               |
+| Eletrônica                    | 320h          | 280h                 | 240h            | 360h              | 1200h               |
+| Automação Industrial          | 320h          | 280h                 | 240h            | 360h              | 1200h               |
+| Internet das Coisas (IoT)     | 320h          | 330h                 | 360h            | 190h              | 1200h               |
+
+### Carga Horária do Módulo Integrador
+
+O Módulo Integrador possui cargas horárias diferentes dependendo da habilitação escolhida:
+
+| Habilitação                   | Carga Horária do Módulo Integrador |
+| ----------------------------- | ---------------------------------- |
+| Informática para Internet     | 160h                               |
+| Redes de Computadores         | 160h                               |
+| Inteligência Artificial (IA)  | 160h                               |
+| Programação de Jogos Digitais | 160h                               |
+| Eletrônica                    | 360h                               |
+| Automação Industrial          | 360h                               |
+| Internet das Coisas (IoT)     | 190h                               |
+
+### Observações
+
+* Os cursos de Informática para Internet, Redes de Computadores, Inteligência Artificial (IA) e Programação de Jogos Digitais possuem carga horária total de 1000 horas.
+* Os cursos de Eletrônica, Automação Industrial e Internet das Coisas (IoT) possuem carga horária total de 1200 horas.
+* O Módulo Integrador é concluído por meio de Atividades Integradoras devidamente comprovadas e homologadas pela coordenação do curso.
+* Para concluir o Módulo Integrador do curso Técnico é necessário comprovar 160 horas de atividades integradoras homologadas (exceto para os cursos de Eletrônica, Automação Industrial e Internet das Coisas (IoT)).
+---
+
 ## Organização Acadêmica
 
 Os cursos possuem estrutura modular que permite ao estudante avançar gradualmente em sua formação.

@@ -6,7 +6,7 @@ langchain-huggingface
 langchain-chroma
 
 watchdog
-
+pypdf
 chromadb
 
 langchain-groq
