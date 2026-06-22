@@ -21,19 +21,19 @@ LLM_MODEL = "Qwen/Qwen2.5-1.5B-Instruct"
 AVAILABLE_MODELS = {
     "Qwen2.5-1.5B (Padrão, leve)": {
         "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
-        "max_tokens": 600,
+        "max_tokens": 400,
         "temperature": 0.4,
         "description": "Modelo leve e rápido da família Qwen (1.5B parâmetros)"
     },
     "Phi-3-mini (Mais capaz)": {
         "model_id": "microsoft/Phi-3-mini-4k-instruct",
-        "max_tokens": 800,
+        "max_tokens": 700,
         "temperature": 0.2,
         "description": "Modelo mais potente da Microsoft (3.8B parâmetros)"
     },
     "SmolLM2-1.7B (Balanceado)": {
         "model_id": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
-        "max_tokens": 700,
+        "max_tokens": 300,
         "temperature": 0.15,
         "description": "Modelo intermediário da HuggingFace (1.7B parâmetros)"
     },

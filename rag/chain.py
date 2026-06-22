@@ -37,7 +37,7 @@ def create_chain(vector_store, model_key=None, debug_retriever: bool = False):
         max_new_tokens=max_tokens,
         temperature=temperature,
         repetition_penalty=1.1,
-        do_sample=False,
+        do_sample=True,
         return_full_text=False,
     )
 
