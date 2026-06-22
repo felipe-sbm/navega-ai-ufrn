@@ -7,6 +7,7 @@ from rag.vector_store import create_vector_store, get_existing_vector_store
 from rag.chain import create_chain
 from ui.sidebar import render_sidebar
 from ui.chat import init_chat_history, display_chat_history, add_message
+import time
 
 st.set_page_config(
     page_title="Navega Aí!",
@@ -75,7 +76,10 @@ if question:
     with st.chat_message("assistant"):
         with st.spinner("Consultando documentos e gerando resposta..."):
             try:
+                start = time.time()
                 response = st.session_state.chain.invoke(question)
+                elapsed = time.time() - start
+                print(f"Tempo da consulta: {elapsed:.2f}s")
                 st.markdown(response)
                 add_message("assistant", response)
             except Exception as e:

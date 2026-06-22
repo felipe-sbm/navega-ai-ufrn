@@ -19,29 +19,23 @@ HF_TOKEN = os.getenv("HF_TOKEN", None)
 LLM_MODEL = "Qwen/Qwen2.5-1.5B-Instruct"
 
 AVAILABLE_MODELS = {
-    "Qwen2.5-1.5B (Padrão, leve)": {
-        "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
-        "max_tokens": 400,
-        "temperature": 0.4,
-        "description": "Modelo leve e rápido da família Qwen (1.5B parâmetros)"
-    },
-    "Phi-3-mini (Mais capaz)": {
-        "model_id": "microsoft/Phi-3-mini-4k-instruct",
-        "max_tokens": 700,
+    "Llama 3.3 70B": {
+        "model_id": "llama-3.3-70b-versatile",
         "temperature": 0.2,
-        "description": "Modelo mais potente da Microsoft (3.8B parâmetros)"
+        "description": "Modelo principal da Meta hospedado pela Groq. Melhor qualidade."
     },
-    "SmolLM2-1.7B (Balanceado)": {
-        "model_id": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
-        "max_tokens": 300,
-        "temperature": 0.15,
-        "description": "Modelo intermediário da HuggingFace (1.7B parâmetros)"
+
+    "Llama 3.1 8B": {
+        "model_id": "llama-3.1-8b-instant",
+        "temperature": 0.2,
+        "description": "Modelo menor e extremamente rápido."
     },
 }
 
-EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
+TOP_K = 3
+FETCH_K = 10
 
-CHUNK_SIZE = 700
-CHUNK_OVERLAP = 100
-TOP_K = 6
-FETCH_K = 20
+CHUNK_SIZE = 500
+CHUNK_OVERLAP = 50
+
+EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"

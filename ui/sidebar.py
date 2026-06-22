@@ -31,7 +31,12 @@ def render_sidebar():
             help="Selecione o modelo de linguagem para responder às perguntas."
         )
         
-        st.caption(AVAILABLE_MODELS[selected_model]["description"])
+        st.caption(
+            AVAILABLE_MODELS[selected_model].get(
+                "description",
+                "Sem descrição."
+            )
+        )
 
         if "selected_model" not in st.session_state:
             st.session_state.selected_model = selected_model

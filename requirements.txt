@@ -9,11 +9,9 @@ watchdog
 
 chromadb
 
-torch
-torchvision
-transformers
+langchain-groq
+groq
 sentence-transformers
-accelerate
 
 python-dotenv
 
