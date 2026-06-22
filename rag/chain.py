@@ -21,18 +21,26 @@ def create_chain(vector_store, model_key=None, debug_retriever: bool = False):
 
     tokenizer = AutoTokenizer.from_pretrained(model_id)
 
+    # Evita carregamento via pipeline que dá fragementos.
+    from transformers import AutoModelForCausalLM
+
+    model = AutoModelForCausalLM.from_pretrained(
+        model_id,
+        device_map="auto",
+        torch_dtype="auto",
+    )
+
     pipe = pipeline(
         "text-generation",
-        model=model_id,
+        model=model,
         tokenizer=tokenizer,
         max_new_tokens=max_tokens,
         temperature=temperature,
-        top_p=0.9,
         repetition_penalty=1.1,
         do_sample=False,
         return_full_text=False,
-        device_map="auto",
     )
+
 
     llm = HuggingFacePipeline(pipeline=pipe)
     retriever = vector_store.as_retriever(
