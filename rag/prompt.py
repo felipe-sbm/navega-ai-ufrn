@@ -13,8 +13,3 @@ Não copie o contexto integralmente.
 Fuja de informações falsas e inventadas.
 Sempre cite a fonte quando ela estiver no contexto.
 """
-
-
-
-
-
