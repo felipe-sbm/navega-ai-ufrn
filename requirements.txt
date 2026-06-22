@@ -16,3 +16,9 @@ sentence-transformers
 accelerate
 
 python-dotenv
+
+# Compatibilidade com chromadb/opentelemetry
+# Isso é só porque apareceu um bug sinistro no streamlit
+# Evitando erro de "Descriptors cannot be created directly"
+
+protobuf<4
