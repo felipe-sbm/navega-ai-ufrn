@@ -65,7 +65,7 @@ if "chain" not in st.session_state or model_changed or "chain_model" not in st.s
         st.session_state.chain_ready = True
         st.session_state.chain_model = current_model
 
-st.title("Navega Aí! 🚢")
+st.title("🚢 Navega Aí!")
 
 display_chat_history()
 question = st.chat_input("Digite sua pergunta sobre a UFRN...")

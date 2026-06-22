@@ -29,7 +29,7 @@ def create_chain(vector_store, model_key=None, debug_retriever: bool = False):
         temperature=temperature,
         top_p=0.9,
         repetition_penalty=1.1,
-        do_sample=True,
+        do_sample=False,
         return_full_text=False,
         device_map="auto",
     )

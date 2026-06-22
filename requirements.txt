@@ -13,4 +13,4 @@ transformers
 sentence-transformers
 accelerate
 
-python-dotenvq
+python-dotenv

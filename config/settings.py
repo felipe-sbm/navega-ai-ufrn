@@ -21,13 +21,13 @@ AVAILABLE_MODELS = {
     "Qwen2.5-1.5B (Padrão, leve)": {
         "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
         "max_tokens": 600,
-        "temperature": 0.1,
+        "temperature": 0.4,
         "description": "Modelo leve e rápido da família Qwen (1.5B parâmetros)"
     },
     "Phi-3-mini (Mais capaz)": {
         "model_id": "microsoft/Phi-3-mini-4k-instruct",
         "max_tokens": 800,
-        "temperature": 0.1,
+        "temperature": 0.2,
         "description": "Modelo mais potente da Microsoft (3.8B parâmetros)"
     },
     "SmolLM2-1.7B (Balanceado)": {
