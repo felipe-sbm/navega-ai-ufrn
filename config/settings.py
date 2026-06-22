@@ -4,9 +4,10 @@ import os
 
 load_dotenv()
 
-# Modo offline para Hugging Face (modelos já em cache no disco)
-os.environ["TRANSFORMERS_OFFLINE"] = "1"
-os.environ["HF_HUB_OFFLINE"] = "1"
+# Modo offline para Hugging Face
+# No deploy, preferimos permitir download online (melhora a inicialização).
+os.environ.pop("TRANSFORMERS_OFFLINE", None)
+os.environ.pop("HF_HUB_OFFLINE", None)
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
 
 BASE_DIR = Path(__file__).parent.parent

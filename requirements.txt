@@ -22,3 +22,6 @@ python-dotenv
 # Evitando erro de "Descriptors cannot be created directly"
 
 protobuf<4
+
+# Compatibilidade para resolver: ImportError: cannot import name '_OTLP_GRPC_HEADERS'
+opentelemetry-exporter-otlp<1.22
